@@ -1,821 +1,402 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramanjeet Saini | Data & AI Engineer</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#0b0f19',
-                            card: '#111827',
-                            border: 'rgba(255, 255, 255, 0.08)',
-                            cyan: '#00f2fe',
-                            purple: '#7928ca',
-                            emerald: '#10b981',
-                            accent: '#4facfe'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace']
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'gradient-x': 'gradient-x 15s ease infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        'gradient-x': {
-                            '0%, 100%': {
-                                'background-size': '200% 200%',
-                                'background-position': 'left center'
-                            },
-                            '50%': {
-                                'background-size': '200% 200%',
-                                'background-position': 'right center'
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramanjeet Saini | Senior Data Engineer</title>
+    <meta
+      name="description"
+      content="Ramanjeet Saini is a Senior Data Engineer and ML Engineer focused on data platforms, MLOps, forecasting, and AI systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="Ramanjeet Saini home">
+          <span class="brand-mark">RS</span>
+          <span>Ramanjeet Saini</span>
+        </a>
 
-    <style>
-        /* Custom Styling for Glassmorphism & Effects */
-        body {
-            background-color: #0b0f19;
-            color: #f3f4f6;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-        }
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact" class="button primary">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-        .glass-card {
-            background: rgba(17, 24, 39, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Data Engineering • ML Platforms</span>
+            <h1>
+              Ramanjeet <span class="highlight">Saini</span>
+            </h1>
+            <div class="hero-subtitle">Senior Data Engineer | ML Engineer</div>
+            <p class="hero-copy">
+              I build scalable data platforms, production-grade ML systems, and AI-enabling
+              infrastructure for financial and enterprise products. My work spans modern ELT,
+              streaming analytics, forecasting, feature platforms, and RAG-based document
+              processing.
+            </p>
 
-        .glass-card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-card-hover:hover {
-            transform: translateY(-4px);
-            border-color: rgba(0, 242, 254, 0.3);
-            box-shadow: 0 12px 30px -10px rgba(0, 242, 254, 0.15);
-        }
-
-        .glass-nav {
-            background: rgba(11, 15, 25, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #00f2fe 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .text-gradient-purple {
-            background: linear-gradient(135deg, #00f2fe 0%, #7928ca 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0b0f19;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1f2937;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #00f2fe;
-        }
-
-        .grid-bg {
-            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
-            background-size: 32px 32px;
-        }
-
-        /* Console Glow */
-        .glow-cyan {
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
-        }
-    </style>
-</head>
-<body class="grid-bg min-h-screen selection:bg-cyan-500 selection:text-black">
-
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="#hero" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-black font-extrabold font-mono text-lg group-hover:scale-105 transition-transform">
-                        RS
-                    </div>
-                    <span class="font-bold text-lg tracking-wide group-hover:text-cyan-400 transition-colors">
-                        Ramanjeet <span class="text-cyan-400 font-light">Saini</span>
-                    </span>
-                </a>
-
-                <!-- Desktop Nav Links -->
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors">About</a>
-                    <a href="#experience" class="text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
-                    <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
-                    <a href="#simulator" class="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2">
-                        <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                        </span>
-                        Live Simulator
-                    </a>
-                    <a href="#contact" class="px-5 py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-cyan-500 to-blue-600 text-black hover:opacity-90 transition-opacity shadow-lg shadow-cyan-500/20">
-                        Get In Touch
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" type="button" class="text-gray-400 hover:text-white focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
+            <div class="hero-meta">
+              <span class="meta-pill">Austin, TX</span>
+              <span class="meta-pill">rj.s.saini@gmail.com</span>
+              <span class="meta-pill">+1 (856) 271-6052</span>
             </div>
-        </div>
+          </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-card border-b border-gray-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#about" class="block py-2 text-gray-300 hover:text-cyan-400">About</a>
-            <a href="#experience" class="block py-2 text-gray-300 hover:text-cyan-400">Experience</a>
-            <a href="#projects" class="block py-2 text-gray-300 hover:text-cyan-400">Projects</a>
-            <a href="#simulator" class="block py-2 text-cyan-400 font-semibold">Live Simulator</a>
-            <a href="#contact" class="block text-center py-3 mt-4 rounded-xl bg-cyan-500 text-black font-bold">Get In Touch</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-screen">
-        <!-- Background Orbs -->
-        <div class="absolute top-1/4 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Hero Content -->
-                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-cyan-500/30 text-xs font-mono text-cyan-400">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        Data Engineering • ML Platforms • AI Systems
-                    </div>
-
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
-                        Ramanjeet <span class="text-gradient">Saini</span>
-                    </h1>
-
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-300 font-mono">
-                        Senior Data Engineer | ML Engineer
-                    </h2>
-
-                    <p class="text-gray-400 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
-                        Data & ML engineer building enterprise-scale analytics, forecasting, and AI systems for financial and enterprise products. I work across <span class="text-yellow-400 font-semibold">Snowflake, Spark, Kafka, AWS, dbt, and MLOps</span> to deliver scalable pipelines, reliable feature platforms, and production-grade ML workflows.
-                    </p>
-
-                    <!-- Tech Tags -->
-                    <div class="flex flex-wrap gap-2 justify-center lg:justify-start text-xs font-mono text-gray-400 pt-2">
-                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/80 border border-gray-800">PySpark & Kafka</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/80 border border-gray-800">dbt & Snowflake</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/80 border border-gray-800">AWS SageMaker</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/80 border border-gray-800">MLOps & RAG</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-gray-900/80 border border-gray-800">Python & SQL</span>
-                    </div>
-
-                    <!-- Call To Action -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a href="#projects" class="px-8 py-4 rounded-xl font-semibold text-black bg-cyan-400 hover:bg-cyan-300 transition-colors shadow-lg shadow-cyan-500/25 text-center flex items-center justify-center gap-2">
-                            Explore Projects <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#simulator" class="px-8 py-4 rounded-xl font-semibold text-white glass-card hover:bg-white/10 transition-colors border border-gray-700 text-center flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-terminal text-cyan-400"></i> Interactive Demo
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Hero Graphic / Dynamic Console Card -->
-                <div class="lg:col-span-5">
-                    <div class="glass-card rounded-2xl p-6 border border-gray-800 relative shadow-2xl">
-                        <div class="flex items-center justify-between pb-4 border-b border-gray-800">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            </div>
-                            <div class="text-xs font-mono text-gray-500">pipeline_engine.py</div>
-                        </div>
-
-                        <div class="pt-4 font-mono text-xs sm:text-sm space-y-3 text-gray-300">
-                            <div class="text-purple-400"># Graph & Vector Pipeline Engine</div>
-                            <div><span class="text-cyan-400">import</span> graph_models <span class="text-cyan-400">as</span> gm</div>
-                            <div><span class="text-cyan-400">import</span> vector_store <span class="text-cyan-400">as</span> vs</div>
-                            <div class="pt-2"><span class="text-emerald-400">class</span> <span class="text-yellow-300">DataEngine</span>:</div>
-                            <div class="pl-4">
-                                <span class="text-cyan-400">def</span> <span class="text-blue-400">__init__</span>(self):<br>
-                                <span class="pl-4 text-gray-500">self.throughput = "2.4M ops/sec"</span><br>
-                                <span class="pl-4 text-gray-500">self.latency = "< 12ms"</span>
-                            </div>
-                            <div class="pl-4">
-                                <span class="text-cyan-400">def</span> <span class="text-blue-400">stream_graph</span>(self, thread_nodes):<br>
-                                <span class="pl-4 text-cyan-400">return</span> gm.traverse(thread_nodes)
-                            </div>
-                            <div class="p-3 bg-black/60 rounded-lg border border-cyan-500/30 text-xs font-mono mt-4">
-                                <div class="flex justify-between text-gray-400">
-                                    <span>SYSTEM STATUS</span>
-                                    <span class="text-emerald-400">ONLINE</span>
-                                </div>
-                                <div class="w-full bg-gray-800 rounded-full h-1.5 mt-2">
-                                    <div class="bg-cyan-400 h-1.5 rounded-full w-4/5 animate-pulse"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="py-20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Background & Philosophy</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Transforming Complex Data into Intelligent Action</h3>
+          <aside class="hero-panel" aria-label="Technical snapshot">
+            <div class="code-window">
+              <div class="window-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-content">
+                <div class="code-line"><span class="code-key">class</span> <span class="code-var">DataEngineer</span>:</div>
+                <div class="code-line">  <span class="code-key">def</span> <span class="code-var">__init__</span>(self):</div>
+                <div class="code-line">    self.stack = [<span class="code-value">"PySpark"</span>, <span class="code-value">"Kafka"</span>, <span class="code-value">"dbt"</span>, <span class="code-value">"Snowflake"</span>]</div>
+                <div class="code-line">    self.cloud = [<span class="code-value">"AWS"</span>, <span class="code-value">"SageMaker"</span>, <span class="code-value">"Kubernetes"</span>]</div>
+                <div class="code-line">    self.outcomes = [<span class="code-value">"99% SLA"</span>, <span class="code-value">"20 min freshness"</span>]</div>
+                <div class="code-line"><span class="code-muted"># Build reliable data + AI systems</span></div>
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-card glass-card-hover p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-building-columns"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-3">FinTech Data Platforms</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        At <span class="text-white font-medium">Western Union</span>, I modernized analytics ELT, built real-time feature infrastructure, and improved partner funding forecasting with measurable outcomes in data freshness, SLA, and cost reduction.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="glass-card glass-card-hover p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-diagram-project"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-3">Real-Time Analytics</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        I design streaming and batch pipelines using Spark, Kafka, dbt, Airflow, and Snowflake to support low-latency analytics, event-driven data products, and observability at enterprise scale.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="glass-card glass-card-hover p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-3">AI & MLOps</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        My work spans RAG document ingestion, KYC document processing, forecasting pipelines, and model retraining systems with SageMaker, Kubeflow, MLflow, and Evidently AI for production reliability.
-                    </p>
-                </div>
+            <div class="quick-stats">
+              <div class="stat-box">
+                <span class="stat-label">Experience</span>
+                <span class="stat-value">5+ years</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Core focus</span>
+                <span class="stat-value">Data + ML</span>
+              </div>
             </div>
+          </aside>
         </div>
-    </section>
+      </section>
 
-    <!-- Skills & Career Timeline Section -->
-    <section id="experience" class="py-20 relative bg-black/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                
-                <!-- Skills Cards (Left Column) -->
-                <div class="lg:col-span-6 space-y-8">
-                    <div>
-                        <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Technical Capabilities</h2>
-                        <h3 class="text-3xl font-extrabold text-white">Engineering Stack</h3>
-                    </div>
+      <section id="about">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">About</span>
+            <h2>Building modern data systems that make decisions faster.</h2>
+          </div>
 
-                    <div class="space-y-4">
-                        <!-- Data Engineering Stack -->
-                        <div class="glass-card p-6 rounded-xl border border-gray-800">
-                            <div class="flex items-center justify-between mb-3">
-                                <h4 class="font-bold text-white flex items-center gap-2">
-                                    <i class="fa-solid fa-database text-cyan-400"></i> Data Engineering & Pipelines
-                                </h4>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">PySpark</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">Kafka</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">Flink</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">Airflow</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">dbt</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">Snowflake</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">Databricks</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-cyan-300 font-mono">Delta Lake</span>
-                            </div>
-                        </div>
+          <div class="card-grid three">
+            <article class="info-card">
+              <div class="icon-wrap"><i class="fa-solid fa-building-columns"></i></div>
+              <h3>FinTech data platforms</h3>
+              <p>
+                Modernized ELT stacks, real-time feature pipelines, and analytics systems at
+                Western Union to improve freshness, reduce recomputation, and keep critical
+                financial workflows operating reliably.
+              </p>
+            </article>
 
-                        <!-- AI & ML Infrastructure -->
-                        <div class="glass-card p-6 rounded-xl border border-gray-800">
-                            <div class="flex items-center justify-between mb-3">
-                                <h4 class="font-bold text-white flex items-center gap-2">
-                                    <i class="fa-solid fa-network-wired text-purple-400"></i> AI, ML & MLOps
-                                </h4>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">Python</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">SQL</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">Scala</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">Go</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">SageMaker</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">MLflow</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">LangChain</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-purple-300 font-mono">LlamaIndex</span>
-                            </div>
-                        </div>
+            <article class="info-card">
+              <div class="icon-wrap"><i class="fa-solid fa-database"></i></div>
+              <h3>Streaming & analytics</h3>
+              <p>
+                Designed event-driven and batch pipelines using Spark, Kafka, Airflow, dbt,
+                Snowflake, and Databricks to support low-latency analytics and operational
+                visibility across enterprise systems.
+              </p>
+            </article>
 
-                        <!-- Cloud & Data Quality -->
-                        <div class="glass-card p-6 rounded-xl border border-gray-800">
-                            <div class="flex items-center justify-between mb-3">
-                                <h4 class="font-bold text-white flex items-center gap-2">
-                                    <i class="fa-solid fa-server text-emerald-400"></i> Cloud, Quality & Observability
-                                </h4>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-emerald-300 font-mono">AWS</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-emerald-300 font-mono">Kubernetes</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-emerald-300 font-mono">Docker</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-emerald-300 font-mono">Terraform</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-emerald-300 font-mono">Great Expectations</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-emerald-300 font-mono">DataDog</span>
-                                <span class="px-3 py-1 rounded-md text-xs bg-gray-800 text-emerald-300 font-mono">Prometheus</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Career Timeline (Right Column) -->
-                <div class="lg:col-span-6 space-y-8">
-                    <div>
-                        <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Journey</h2>
-                        <h3 class="text-3xl font-extrabold text-white">Career Evolution</h3>
-                    </div>
-
-                    <div class="relative pl-6 border-l-2 border-gray-800 space-y-8">
-                        <!-- Timeline Item 1 -->
-                        <div class="relative group">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-cyan-500 border-4 border-gray-900 group-hover:scale-125 transition-transform"></div>
-                            <span class="text-xs font-mono text-cyan-400 font-semibold">Aug 2023 - Present</span>
-                            <h4 class="text-lg font-bold text-white mt-1">Machine Learning Engineer</h4>
-                            <p class="text-xs text-yellow-400 mb-2 font-medium">Western Union</p>
-                            <p class="text-sm text-gray-300 leading-relaxed">
-                                Built modern analytics ELT on dbt + Snowflake, real-time feature infrastructure with Kafka and Redis, and forecasting pipelines with SageMaker to drive faster data freshness, higher cash availability, and lower operational cost.
-                            </p>
-                        </div>
-
-                        <!-- Timeline Item 2 -->
-                        <div class="relative group">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-gray-900 group-hover:scale-125 transition-transform"></div>
-                            <span class="text-xs font-mono text-purple-400 font-semibold">Dec 2022 - Apr 2023</span>
-                            <h4 class="text-lg font-bold text-white mt-1">Software Engineer</h4>
-                            <p class="text-xs text-purple-300 mb-2 font-medium">HEB Digital</p>
-                            <p class="text-sm text-gray-300 leading-relaxed">
-                                Developed a FastAPI + SQLAlchemy service for GitLab vulnerability scanning reporting, reducing triage effort and accelerating team response time with automated Slack delivery and ML severity classification.
-                            </p>
-                        </div>
-
-                        <!-- Timeline Item 3 -->
-                        <div class="relative group">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-gray-600 border-4 border-gray-900"></div>
-                            <span class="text-xs font-mono text-gray-400 font-semibold">Jul 2020 - Jun 2022</span>
-                            <h4 class="text-lg font-bold text-white mt-1">Data Engineer</h4>
-                            <p class="text-xs text-gray-300 mb-2 font-medium">Infosys Limited</p>
-                            <p class="text-sm text-gray-300 leading-relaxed">
-                                Designed and optimized large-scale Spark and EMR ETL pipelines, improved throughput with Kafka and S3/DynamoDB flows, and delivered Snowflake and S3 proof-of-concepts for data performance and cost savings.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <article class="info-card">
+              <div class="icon-wrap"><i class="fa-solid fa-brain"></i></div>
+              <h3>AI & MLOps</h3>
+              <p>
+                Delivered forecasting, KYC automation, and document-processing pipelines with
+                SageMaker, Kubeflow, MLflow, LlamaIndex, and OpenSearch to bring ML and AI into
+                production with measurable business value.
+              </p>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Featured Projects Section -->
-    <section id="projects" class="py-20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <section id="experience">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Experience</span>
+            <h2>Career journey</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="job-card">
+              <div class="job-header">
                 <div>
-                    <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Portfolio</h2>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Featured Projects</h3>
+                  <div class="job-company">Western Union</div>
+                  <div class="job-role">Machine Learning Engineer (Data &amp; ML Platform)</div>
                 </div>
-
-                <!-- Filter Controls -->
-                <div class="flex flex-wrap gap-2 mt-6 md:mt-0 font-mono text-xs">
-                    <button onclick="filterProjects('all')" class="project-filter-btn active px-4 py-2 rounded-lg glass-card border border-cyan-400 text-cyan-400">All</button>
-                    <button onclick="filterProjects('ai')" class="project-filter-btn px-4 py-2 rounded-lg glass-card text-gray-400 hover:text-white">AI / ML</button>
-                    <button onclick="filterProjects('data')" class="project-filter-btn px-4 py-2 rounded-lg glass-card text-gray-400 hover:text-white">Data Eng</button>
-                    <button onclick="filterProjects('graph')" class="project-filter-btn px-4 py-2 rounded-lg glass-card text-gray-400 hover:text-white">Graph Models</button>
+                <div class="job-meta">
+                  <div>Austin, TX</div>
+                  <div>Aug 2023 – Present</div>
                 </div>
-            </div>
+              </div>
+              <ul>
+                <li>
+                  Improved analytics data freshness from hours to <strong>20 minutes</strong> and reduced
+                  pipeline recomputation by <strong>45%</strong> by re-architecting the ELT stack onto dbt on
+                  Snowflake with Fivetran/Airbyte ingestion and Airflow orchestration.
+                </li>
+                <li>
+                  Built a real-time feature infrastructure using Kafka, Snowflake, and Redis to scale
+                  read throughput to <strong>500M+ reads/day</strong> with sub-10 ms latency.
+                </li>
+                <li>
+                  Delivered forecasting pipelines for partner funding demand with SageMaker (Prophet,
+                  SARIMAX, DeepAR) and achieved <strong>99% cash-availability SLA</strong> while reducing idle float by
+                  <strong>$2.5M</strong>.
+                </li>
+                <li>
+                  Led a RAG document ingestion pipeline with LlamaIndex and OpenSearch to reduce analyst
+                  handle time by <strong>26%</strong> and improve straight-through processing by <strong>19 percentage points</strong>.
+                </li>
+              </ul>
+            </article>
 
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Project 1 -->
-                <div class="project-card data glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border border-gray-800">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Data Engineering</span>
-                            <i class="fa-solid fa-chart-line text-xl text-cyan-400"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-2">Partner Funding Demand Forecasting</h4>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Designed forecasting pipelines and data features to optimize cash availability and reduce idle float, supporting business decisions with model-driven insights at scale.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-gray-400 mb-6">
-                            <span>SageMaker</span> • <span>Prophet</span> • <span>SARIMAX</span> • <span>Snowflake</span>
-                        </div>
-                        <button onclick="openProjectModal('forecasting')" class="w-full py-2.5 rounded-xl border border-gray-700 text-xs font-mono text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors">
-                            View Architecture Details
-                        </button>
-                    </div>
+            <article class="job-card">
+              <div class="job-header">
+                <div>
+                  <div class="job-company">HEB Digital</div>
+                  <div class="job-role">Software Engineer &mdash; Capstone Intern</div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="project-card ai glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border border-gray-800">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">AI / ML</span>
-                            <i class="fa-solid fa-file-lines text-xl text-emerald-400"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-2">RAG Document Ingestion Pipeline</h4>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Built a document embedding and retrieval workflow for case files using LlamaIndex and OpenSearch, improving analyst workflow efficiency and straight-through processing.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-gray-400 mb-6">
-                            <span>LlamaIndex</span> • <span>OpenSearch</span> • <span>AWS Textract</span> • <span>RAG</span>
-                        </div>
-                        <button onclick="openProjectModal('rag-docs')" class="w-full py-2.5 rounded-xl border border-gray-700 text-xs font-mono text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors">
-                            View Architecture Details
-                        </button>
-                    </div>
+                <div class="job-meta">
+                  <div>Austin, TX</div>
+                  <div>Dec 2022 – Apr 2023</div>
                 </div>
+              </div>
+              <ul>
+                <li>
+                  Built a FastAPI and SQLAlchemy REST API on containerized PostgreSQL and Kubernetes to
+                  automate GitLab vulnerability scan reporting and integrated Slack webhooks for faster triage.
+                </li>
+                <li>
+                  Reduced triage effort by <strong>20%</strong> and acknowledgment time by <strong>33%</strong> with automated processing and a ML-based severity classifier.
+                </li>
+              </ul>
+            </article>
 
-                <!-- Project 3 -->
-                <div class="project-card data glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border border-gray-800">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">Data Platform</span>
-                            <i class="fa-solid fa-microchip text-xl text-purple-400"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-2">KYC Document Processing Pipeline</h4>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Created a document processing architecture with AWS Textract, Lambda, DynamoDB, and S3 for operational reviews and compliance-friendly audit trails.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-gray-400 mb-6">
-                            <span>Textract</span> • <span>Lambda</span> • <span>DynamoDB</span> • <span>S3</span>
-                        </div>
-                        <button onclick="openProjectModal('kyc-pipeline')" class="w-full py-2.5 rounded-xl border border-gray-700 text-xs font-mono text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors">
-                            View Architecture Details
-                        </button>
-                    </div>
+            <article class="job-card">
+              <div class="job-header">
+                <div>
+                  <div class="job-company">Infosys Limited</div>
+                  <div class="job-role">Data Engineer</div>
                 </div>
+                <div class="job-meta">
+                  <div>Pune, India</div>
+                  <div>Jul 2020 – Jun 2022</div>
+                </div>
+              </div>
+              <ul>
+                <li>
+                  Owned large-scale Apache Spark and AWS EMR batch ETL pipelines processing 500M+ records per week with Airflow orchestration and Kafka-based real-time streaming.
+                </li>
+                <li>
+                  Reduced infrastructure costs by <strong>34%</strong> through cluster optimization and spot instance strategies and improved throughput by <strong>12%</strong> on Kafka, S3 and DynamoDB data flows.
+                </li>
+              </ul>
+            </article>
 
-            </div>
+            <article class="job-card">
+              <div class="job-header">
+                <div>
+                  <div class="job-company">Infosys Limited</div>
+                  <div class="job-role">Cloud Engineer</div>
+                </div>
+                <div class="job-meta">
+                  <div>Pune, India</div>
+                  <div>Oct 2018 – Jul 2020</div>
+                </div>
+              </div>
+              <ul>
+                <li>
+                  Improved DBaaS reliability for SQL Server, Oracle, and PostgreSQL by using CloudWatch
+                  alerts, capacity planning, and observability to reduce downtime by <strong>28%</strong>.
+                </li>
+                <li>
+                  Deployed Tableau connectors with GitLab CI/CD and Python data-quality checks to improve
+                  reliability and operational efficiency for business reporting workloads.
+                </li>
+              </ul>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Interactive Playground / Demo Tool -->
-    <section id="simulator" class="py-20 relative bg-black/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 font-mono text-xs mb-3 border border-cyan-500/20">
-                    <i class="fa-solid fa-play"></i> Live Playground
-                </div>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Data Pipeline & Feature Streaming Simulator</h3>
-                <p class="text-gray-400 text-sm mt-2">Demonstrate throughput and latency metrics for real-time analytics and feature-generation workflows.</p>
-            </div>
+      <section id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Projects</span>
+            <h2>Selected work</h2>
+          </div>
 
-            <!-- Simulator Console Window -->
-            <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden shadow-2xl">
-                <!-- Toolbar -->
-                <div class="bg-gray-900/90 px-6 py-4 border-b border-gray-800 flex flex-wrap items-center justify-between gap-4">
-                    <div class="flex items-center space-x-3">
-                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                        <span class="text-xs font-mono text-gray-400 ml-2">simulator_v2.4.0-active</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <button id="sim-start-btn" onclick="toggleSimulator()" class="px-4 py-1.5 rounded-lg bg-cyan-500 text-black font-mono text-xs font-bold hover:bg-cyan-400 transition-colors flex items-center gap-2">
-                            <i class="fa-solid fa-play"></i> Start Stream
-                        </button>
-                        <button onclick="traverseGraphNodes()" class="px-4 py-1.5 rounded-lg bg-purple-600 text-white font-mono text-xs font-bold hover:bg-purple-500 transition-colors flex items-center gap-2">
-                            <i class="fa-solid fa-diagram-next"></i> Traverse Graph
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Main Interactive Dashboard -->
-                <div class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-                    
-                    <!-- Metrics Panel (Left 4 cols) -->
-                    <div class="lg:col-span-4 space-y-4">
-                        <div class="p-4 rounded-xl bg-black/50 border border-gray-800">
-                            <div class="text-xs font-mono text-gray-400">STREAM THROUGHPUT</div>
-                            <div id="sim-throughput" class="text-2xl font-mono font-bold text-cyan-400 mt-1">0 msg/s</div>
-                        </div>
-
-                        <div class="p-4 rounded-xl bg-black/50 border border-gray-800">
-                            <div class="text-xs font-mono text-gray-400">ACTIVE GRAPH NODES</div>
-                            <div id="sim-nodes" class="text-2xl font-mono font-bold text-purple-400 mt-1">1,024 Nodes</div>
-                        </div>
-
-                        <div class="p-4 rounded-xl bg-black/50 border border-gray-800">
-                            <div class="text-xs font-mono text-gray-400">AVERAGE QUERY LATENCY</div>
-                            <div id="sim-latency" class="text-2xl font-mono font-bold text-emerald-400 mt-1">4.2 ms</div>
-                        </div>
-                    </div>
-
-                    <!-- Live Terminal Output (Right 8 cols) -->
-                    <div class="lg:col-span-8">
-                        <div class="h-64 rounded-xl bg-black/80 border border-gray-800 p-4 font-mono text-xs overflow-y-auto space-y-2" id="console-output">
-                            <div class="text-gray-500">[SYSTEM] Simulator initialized. Ready to execute pipeline streams.</div>
-                            <div class="text-cyan-400">[GRAPH] Conversation Thread Graph model loaded into memory cache.</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-gray-800 text-center relative overflow-hidden">
-                <div class="absolute -top-24 -right-24 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl"></div>
-
-                <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-mono font-bold mb-2">Get In Touch</h2>
-                <h3 class="text-3xl font-extrabold text-white mb-4">Let's Build Something High-Impact</h3>
-                <p class="text-gray-400 text-sm max-w-xl mx-auto mb-8 leading-relaxed">
-                    I’m open to discussing data platform modernization, ML system design, real-time analytics, and AI integration opportunities.
+          <div class="project-grid">
+            <article class="project-card">
+              <div>
+                <span class="badge">Forecasting</span>
+                <h3>Partner Funding Demand Forecasting</h3>
+                <p>
+                  Built forecasting pipelines and feature engineering workflows to improve cash
+                  availability and reduce idle float for financial planning decisions.
                 </p>
+              </div>
+              <div class="project-tags">
+                <span>SageMaker</span>
+                <span>Prophet</span>
+                <span>SARIMAX</span>
+                <span>Snowflake</span>
+              </div>
+            </article>
 
-                <!-- Form -->
-                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4 max-w-lg mx-auto text-left">
-                    <div>
-                        <label class="block text-xs font-mono text-gray-400 mb-1">Your Name</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-xl bg-black/60 border border-gray-800 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="e.g. Sarah Connor">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-mono text-gray-400 mb-1">Email Address</label>
-                        <input type="email" required class="w-full px-4 py-3 rounded-xl bg-black/60 border border-gray-800 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="sarah@example.com">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-mono text-gray-400 mb-1">Message</label>
-                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-black/60 border border-gray-800 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Tell me about your project or inquiry..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold text-sm tracking-wide hover:opacity-90 transition-opacity">
-                        Send Message
-                    </button>
-                </form>
+            <article class="project-card">
+              <div>
+                <span class="badge">AI / RAG</span>
+                <h3>RAG Document Ingestion Pipeline</h3>
+                <p>
+                  Designed a document ingestion and retrieval workflow using LlamaIndex and OpenSearch
+                  to improve analyst handle time and reduce manual document review effort.
+                </p>
+              </div>
+              <div class="project-tags">
+                <span>LlamaIndex</span>
+                <span>OpenSearch</span>
+                <span>AWS Textract</span>
+                <span>RAG</span>
+              </div>
+            </article>
 
-                <!-- Social Links -->
-                <div class="flex justify-center items-center gap-6 mt-10 pt-8 border-t border-gray-800">
-                    <button onclick="copyEmail()" class="text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-2 text-sm font-mono">
-                        <i class="fa-solid fa-envelope"></i> Copy Email
-                    </button>
-                    <a href="https://github.com/ramanjeetsaini" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors text-lg">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ramanjeet-saini" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors text-lg">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
+            <article class="project-card">
+              <div>
+                <span class="badge">Compliance</span>
+                <h3>KYC Document Processing Pipeline</h3>
+                <p>
+                  Created an end-to-end document processing pipeline using AWS Textract, Lambda, DynamoDB,
+                  and S3 to reduce manual review cost and improve operational traceability.
+                </p>
+              </div>
+              <div class="project-tags">
+                <span>Textract</span>
+                <span>Lambda</span>
+                <span>DynamoDB</span>
+                <span>S3</span>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-gray-900 text-center text-xs font-mono text-gray-600">
-        <p>© 2026 Ramanjeet Saini. Architected for Data & AI Excellence.</p>
+      <section id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Skills</span>
+            <h2>Core technical stack</h2>
+          </div>
+
+          <div class="card-grid two">
+            <article class="skill-card">
+              <h3>Data engineering</h3>
+              <div class="skill-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Scala</span>
+                <span class="skill-tag">PySpark</span>
+                <span class="skill-tag">Kafka</span>
+                <span class="skill-tag">Flink</span>
+                <span class="skill-tag">Airflow</span>
+                <span class="skill-tag">dbt</span>
+                <span class="skill-tag">Snowflake</span>
+                <span class="skill-tag">Databricks</span>
+                <span class="skill-tag">Delta Lake</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <h3>ML, AI, and cloud</h3>
+              <div class="skill-list">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">SageMaker</span>
+                <span class="skill-tag">Bedrock</span>
+                <span class="skill-tag">MLflow</span>
+                <span class="skill-tag">Kubeflow</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">LlamaIndex</span>
+                <span class="skill-tag">LangChain</span>
+                <span class="skill-tag">OpenSearch</span>
+                <span class="skill-tag">Great Expectations</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Education</span>
+            <h2>Academic background</h2>
+          </div>
+
+          <div class="edu-grid">
+            <article class="edu-card">
+              <div>
+                <h3>The University of Texas at Austin</h3>
+                <p class="edu-meta">M.S., Information Technology &amp; Management</p>
+                <p class="edu-meta">Concentrations: Machine Learning, Data Science</p>
+              </div>
+              <div class="edu-meta">May 2023</div>
+            </article>
+
+            <article class="edu-card">
+              <div>
+                <h3>Pandit Deendayal Energy University</h3>
+                <p class="edu-meta">B.Tech., Mechanical Engineering</p>
+              </div>
+              <div class="edu-meta">May 2018</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div>
+              <span class="eyebrow">Contact</span>
+              <h2>Let’s build something high-impact.</h2>
+            </div>
+            <div class="contact-links">
+              <a href="mailto:rj.s.saini@gmail.com">rj.s.saini@gmail.com</a>
+              <a href="tel:+18562716052">+1 (856) 271-6052</a>
+              <a href="https://www.linkedin.com/in/ramanjeet-saini" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/ramanjeetsaini" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> Ramanjeet Saini</div>
     </footer>
 
-    <!-- Project Detail Modal -->
-    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
-        <div class="glass-card rounded-2xl max-w-2xl w-full p-6 sm:p-8 border border-gray-800 relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            <div id="modal-content"></div>
-        </div>
-    </div>
-
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 px-6 py-3 rounded-xl glass-card border border-cyan-500/50 text-cyan-300 font-mono text-xs transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-        Message sent successfully!
-    </div>
-
-    <!-- JavaScript Interactions -->
-    <script>
-        
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Project Filtering Logic
-        function filterProjects(category) {
-            const buttons = document.querySelectorAll('.project-filter-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('border', 'border-cyan-400', 'text-cyan-400');
-                btn.classList.add('text-gray-400');
-            });
-            event.target.classList.add('border', 'border-cyan-400', 'text-cyan-400');
-
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.classList.contains(category)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Modal Content Data
-        const projectData = {
-            'forecasting': {
-                title: 'Partner Funding Demand Forecasting',
-                category: 'Forecasting & ML Platform',
-                description: 'Built forecasting infrastructure for partner funding demand to support cash availability and reduce idle float. This involved data pipeline creation, feature engineering, and model deployment in production with SageMaker and monitoring across data quality and model drift.',
-                highlights: [
-                    'Reduced idle float by $2.5M',
-                    'Achieved 99% cash-availability SLA',
-                    'Managed model retraining and monitoring workflows'
-                ]
-            },
-            'rag-docs': {
-                title: 'RAG Document Ingestion Pipeline',
-                category: 'AI & Retrieval Infrastructure',
-                description: 'Developed a retrieval-augmented generation document pipeline that chunked, embedded, and indexed enterprise documents into OpenSearch using LlamaIndex, improving analyst efficiency and straight-through processing for document-heavy workflows.',
-                highlights: [
-                    '26% reduction in analyst handle time',
-                    '19 pp increase in straight-through processing',
-                    'Built with compliance-aware document handling'
-                ]
-            },
-            'kyc-pipeline': {
-                title: 'KYC Document Processing Pipeline',
-                category: 'Document Automation & Compliance',
-                description: 'Created an end-to-end KYC workflow using AWS Textract, Lambda, DynamoDB, and S3 to automate document ingestion, extraction, and auditability while reducing manual review costs and improving operational scaling.',
-                highlights: [
-                    'Cut $0.9M/quarter in manual review costs',
-                    'Operationalized document archive and audit flows',
-                    'Improved time-to-review for case processing'
-                ]
-            }
-        };
-
-        function openProjectModal(key) {
-            const data = projectData[key];
-            if (!data) return;
-
-            const content = `
-                <span class="text-xs font-mono text-cyan-400">${data.category}</span>
-                <h3 class="text-2xl font-bold text-white mt-1 mb-4">${data.title}</h3>
-                <p class="text-gray-300 text-sm leading-relaxed mb-6">${data.description}</p>
-                <h4 class="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2">Key Technical Highlights</h4>
-                <ul class="list-disc list-inside space-y-2 text-sm text-gray-300 mb-6 font-mono">
-                    ${data.highlights.map(h => `<li>${h}</li>`).join('')}
-                </ul>
-            `;
-            document.getElementById('modal-content').innerHTML = content;
-            document.getElementById('project-modal').classList.remove('hidden');
-        }
-
-        function closeProjectModal() {
-            document.getElementById('project-modal').classList.add('hidden');
-        }
-
-        // Live Interactive Simulator Logic
-        let simInterval = null;
-        let isStreaming = false;
-
-        function toggleSimulator() {
-            const btn = document.getElementById('sim-start-btn');
-            const consoleOutput = document.getElementById('console-output');
-
-            if (!isStreaming) {
-                isStreaming = true;
-                btn.innerHTML = '<i class="fa-solid fa-pause"></i> Pause Stream';
-                btn.classList.replace('bg-cyan-500', 'bg-yellow-500');
-
-                simInterval = setInterval(() => {
-                    const throughput = Math.floor(Math.random() * 4000) + 12000;
-                    const latency = (Math.random() * 2 + 3).toFixed(1);
-                    document.getElementById('sim-throughput').innerText = throughput.toLocaleString() + ' msg/s';
-                    document.getElementById('sim-latency').innerText = latency + ' ms';
-
-                    const log = document.createElement('div');
-                    log.className = 'text-gray-400';
-                    log.innerText = `[STREAM] Processed batch packet #${Math.floor(Math.random()*90000 + 10000)} | Latency: ${latency}ms`;
-                    consoleOutput.appendChild(log);
-                    consoleOutput.scrollTop = consoleOutput.scrollHeight;
-                }, 1000);
-            } else {
-                isStreaming = false;
-                clearInterval(simInterval);
-                btn.innerHTML = '<i class="fa-solid fa-play"></i> Start Stream';
-                btn.classList.replace('bg-yellow-500', 'bg-cyan-500');
-            }
-        }
-
-        function traverseGraphNodes() {
-            const consoleOutput = document.getElementById('console-output');
-            const nodeCount = Math.floor(Math.random() * 500) + 1000;
-            document.getElementById('sim-nodes').innerText = nodeCount.toLocaleString() + ' Nodes';
-
-            const log = document.createElement('div');
-            log.className = 'text-purple-400 font-bold';
-            log.innerText = `[GRAPH TRAVERSAL] Executing depth-first search across ${nodeCount} thread nodes... Done (11ms).`;
-            consoleOutput.appendChild(log);
-            consoleOutput.scrollTop = consoleOutput.scrollHeight;
-        }
-
-        // Form Submission
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            showToast("Message sent! Thanks for reaching out.");
-            e.target.reset();
-        }
-
-        // Copy Email to Clipboard
-        function copyEmail() {
-            const tempInput = document.createElement("input");
-            tempInput.value = "rj.s.saini@gmail.com";
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            showToast("Email copied to clipboard!");
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.innerText = message;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
-        }
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
